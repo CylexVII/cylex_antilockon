@@ -3,7 +3,7 @@ local Config = {
     ['antiLockon'] = true,
 }
 
-Cylex.NewThread(function()
+CreateThread(function()
     if not Config['antiControllerAimAssist'] then return end
     while true do
         if NetworkGetTargetingMode() ~= 3 then
@@ -15,7 +15,7 @@ Cylex.NewThread(function()
     end
 end)
 
-Cylex.NewThread(function()
+CreateThread(function()
     if not Config['antiLockon'] then return end
     while true do 
         local ped = PlayerPedId()
