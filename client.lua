@@ -25,7 +25,7 @@ CreateThread(function()
             local lockOn = GetLockonDistanceOfCurrentPedWeapon(ped)
             if lockOn > 500.0 then 
                 local player = PlayerId()
-                SetPlayerLockon(player, true)
+                SetPlayerLockon(player, false)
                 SetPlayerLockonRangeOverride(player, -1.0)
             end
         end
